@@ -29,6 +29,7 @@ h2 {
     font-size: 18px;
     padding: 15px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .bottom-bar {
@@ -38,6 +39,7 @@ h2 {
     width: 100%;
     background-color: #FFFFFF;
     padding: 15px 25px;
+    z-index: 1;
 }
 
 .bottom-bar button {
@@ -83,6 +85,10 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.food-card:hover {
+    cursor: pointer;
 }
 
 .food-card img {
