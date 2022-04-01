@@ -73,13 +73,16 @@ h2 {
     display: flex;
 }
 
-.food-cards div {
+.food-cards > div {
     width: 172px;
     background-color: #FFFFFF;
     border-radius: 9px;
     padding: 18px 14px;
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
     margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .food-cards img {
@@ -105,7 +108,7 @@ h2 {
     margin-bottom: 8px;
 }
 
-.food-cards h3 {
+.food-cards h4 {
     font-size: 16px;
     color: black;
 }
