@@ -34,6 +34,23 @@ function checkSelection() {
 
 function finishOrder() {
     if (document.querySelector(".clickable") !== null) {
+        const selectedMainCourse = document.querySelector(".main-course .selected");
+        const selectedDrink = document.querySelector(".drinks .selected");
+        const selectedDessert = document.querySelector(".dessert .selected");
+
+        document.querySelector(".main-course-name").innerHTML = selectedMainCourse.querySelector(".name").innerHTML;
+        document.querySelector(".drink-name").innerHTML = selectedDrink.querySelector(".name").innerHTML;
+        document.querySelector(".dessert-name").innerHTML = selectedDessert.querySelector(".name").innerHTML;
+
+        const mainCoursePrice = Number(selectedMainCourse.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
+        const drinkPrice = Number(selectedDrink.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
+        const dessertPrice = Number(selectedDessert.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
+
+        document.querySelector(".main-course-price").innerHTML = mainCoursePrice.toFixed(2).toString().replace(".", ",");
+        document.querySelector(".drink-price").innerHTML = drinkPrice.toFixed(2).toString().replace(".", ",");
+        document.querySelector(".dessert-price").innerHTML = dessertPrice.toFixed(2).toString().replace(".", ",");
+        document.querySelector(".total").innerHTML = (mainCoursePrice + drinkPrice + dessertPrice).toFixed(2).toString().replace(".", ",");
+
         document.querySelector(".finish-order").classList.remove("hidden");
     }
 }
