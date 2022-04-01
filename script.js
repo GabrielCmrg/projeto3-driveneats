@@ -37,3 +37,7 @@ function finishOrder() {
         document.querySelector(".finish-order").classList.remove("hidden");
     }
 }
+
+function cancel() {
+    document.querySelector(".finish-order").classList.add("hidden");
+}
