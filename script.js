@@ -31,3 +31,9 @@ function checkSelection() {
         bottom.querySelector("button").innerHTML = "Fechar pedido";
     }
 }
+
+function finishOrder() {
+    if (document.querySelector(".clickable") !== nul) {
+        
+    }
+}

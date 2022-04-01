@@ -136,9 +136,23 @@
 
     <!-- bottom-bar -->
     <div class="bottom-bar">
-        <button>
+        <button onclick="finishOrder()">
             Selecione os 3 itens para fechar o pedido
         </button>
+    </div>
+
+    <div class="finish-order hidden">
+        <div>
+            <h5>Confirme seu pedido</h5>
+            <div class="justified">
+                <div><span>Frango Yin Yang</span> <span>14,90</span></div>
+                <div><span>Coquinha gelada</span> <span>4,90</span></div>
+                <div><span>Pudim</span> <span>7,90</span></div>
+                <div><span>TOTAL</span> <span>R$ 27,70</span></div>
+            </div>
+            <button>Tudo certo, pode pedir!</button>
+            <button>Cancelar</button>
+        </div>
     </div>
 
     <!-- script js -->
