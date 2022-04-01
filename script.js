@@ -60,6 +60,9 @@ function cancel() {
 }
 
 function sendOrder() {
+    const name = prompt("Qual o seu nome?");
+    const address = prompt("Qual seu endereço?");
+
     const infos = document.querySelector(".justified");
 
     const mainCourse = infos.querySelector(".main-course-name").innerHTML;
@@ -67,7 +70,7 @@ function sendOrder() {
     const dessert = infos.querySelector(".dessert-name").innerHTML;
     const total = infos.querySelector(".total").innerHTML;
 
-    const textToSend = `Olá, gostaria de fazer o pedido:\n- Prato: ${mainCourse}\n- Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: ${total}`;
+    const textToSend = `Olá, gostaria de fazer o pedido:\n- Prato: ${mainCourse}\n- Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: ${total}\n\nNome: ${name}\nEndereço: ${address}`;
 
     const msg = encodeURIComponent(textToSend);
 
