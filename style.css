@@ -69,11 +69,11 @@ h2 {
     margin: 27px 19px 16px;
 }
 
-.food-cards {
+.dishes > div > div {
     display: flex;
 }
 
-.food-cards > div {
+.food-card {
     width: 172px;
     background-color: #FFFFFF;
     border-radius: 9px;
@@ -85,7 +85,7 @@ h2 {
     justify-content: space-between;
 }
 
-.food-cards img {
+.food-card img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
@@ -93,14 +93,14 @@ h2 {
     margin-bottom: 8px;
 }
 
-.food-cards h3 {
+.food-card h3 {
     font-size: 16px;
     font-weight: 700;
     color: #333333;
     margin-bottom: 10px;
 }
 
-.food-cards span {
+.food-card span {
     font-size: 15px;
     font-weight: 300;
     color: #A6A6A6;
@@ -108,7 +108,24 @@ h2 {
     margin-bottom: 8px;
 }
 
-.food-cards h4 {
+.food-card h4 {
     font-size: 16px;
     color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-card ion-icon {
+    display: none;
+}
+
+.selected {
+    box-shadow: inset 0 0 0 5px #32B72F;
+}
+
+.selected ion-icon {
+    display: initial;
+    font-size: 19px;
+    color: #32B72F;
 }
