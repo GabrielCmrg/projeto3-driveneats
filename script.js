@@ -33,7 +33,7 @@ function checkSelection() {
 }
 
 function finishOrder() {
-    if (document.querySelector(".clickable") !== nul) {
-        
+    if (document.querySelector(".clickable") !== null) {
+        document.querySelector(".finish-order").classList.remove("hidden");
     }
 }
