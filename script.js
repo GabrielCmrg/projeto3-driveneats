@@ -16,4 +16,18 @@ function select(card) {
     }
 
     card.classList.add("selected");
+
+    checkSelection();
+}
+
+function checkSelection() {
+    const item1 = document.querySelector(".main-course .selected");
+    const item2 = document.querySelector(".drinks .selected");
+    const item3 = document.querySelector(".dessert .selected");
+
+    if (item1 !== null && item2 !== null && item3 !== null) {
+        const bottom = document.querySelector(".bottom-bar");
+        bottom.classList.add("clickable");
+        bottom.querySelector("button").innerHTML = "Fechar pedido";
+    }
 }
