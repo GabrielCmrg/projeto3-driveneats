@@ -49,7 +49,7 @@ function finishOrder() {
         document.querySelector(".main-course-price").innerHTML = mainCoursePrice.toFixed(2).toString().replace(".", ",");
         document.querySelector(".drink-price").innerHTML = drinkPrice.toFixed(2).toString().replace(".", ",");
         document.querySelector(".dessert-price").innerHTML = dessertPrice.toFixed(2).toString().replace(".", ",");
-        document.querySelector(".total").innerHTML = (mainCoursePrice + drinkPrice + dessertPrice).toFixed(2).toString().replace(".", ",");
+        document.querySelector(".total").innerHTML = "R$ " + (mainCoursePrice + drinkPrice + dessertPrice).toFixed(2).toString().replace(".", ",");
 
         document.querySelector(".finish-order").classList.remove("hidden");
     }
@@ -57,4 +57,21 @@ function finishOrder() {
 
 function cancel() {
     document.querySelector(".finish-order").classList.add("hidden");
+}
+
+function sendOrder() {
+    const infos = document.querySelector(".justified");
+
+    const mainCourse = infos.querySelector(".main-course-name").innerHTML;
+    const drink = infos.querySelector(".drink-name").innerHTML;
+    const dessert = infos.querySelector(".dessert-name").innerHTML;
+    const total = infos.querySelector(".total").innerHTML;
+
+    const textToSend = `Olá, gostaria de fazer o pedido:\n- Prato: ${mainCourse}\n- Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: ${total}`;
+
+    const msg = encodeURIComponent(textToSend);
+
+    const url = "https://wa.me/?text=" + msg;
+
+    window.location.href = url;
 }
