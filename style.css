@@ -73,6 +73,7 @@ button:active {
 
 .dishes > div > div {
     display: flex;
+    overflow-x: scroll;
 }
 
 .food-card {
