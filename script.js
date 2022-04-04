@@ -42,9 +42,9 @@ function finishOrder() {
         document.querySelector(".drink-name").innerHTML = selectedDrink.querySelector(".name").innerHTML;
         document.querySelector(".dessert-name").innerHTML = selectedDessert.querySelector(".name").innerHTML;
 
-        const mainCoursePrice = Number(selectedMainCourse.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
-        const drinkPrice = Number(selectedDrink.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
-        const dessertPrice = Number(selectedDessert.querySelector(".price").innerHTML.split(" ")[1].replace(",", "."));
+        const mainCoursePrice = Number(selectedMainCourse.querySelector(".price").innerText.split(" ")[1].replace(",", "."));
+        const drinkPrice = Number(selectedDrink.querySelector(".price").innerText.split(" ")[1].replace(",", "."));
+        const dessertPrice = Number(selectedDessert.querySelector(".price").innerText.split(" ")[1].replace(",", "."));
 
         document.querySelector(".main-course-price").innerHTML = mainCoursePrice.toFixed(2).toString().replace(".", ",");
         document.querySelector(".drink-price").innerHTML = drinkPrice.toFixed(2).toString().replace(".", ",");
