@@ -74,7 +74,9 @@ function sendOrder() {
 
     const msg = encodeURIComponent(textToSend);
 
-    const url = "https://wa.me/?text=" + msg;
+    const restaurantNumber = ""; // Insert number of the restaurant here
+
+    const url = `https://wa.me/${restaurantNumber}?text=${msg}`;
 
     window.location.href = url;
 }
